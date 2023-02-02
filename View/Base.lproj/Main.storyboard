@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ir8-HQ-aUA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Graph View Controller-->
+        <scene sceneID="JOy-rD-PIS">
+            <objects>
+                <viewController id="6gK-Ok-gUs" customClass="GraphViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cjd-0H-KeO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGX-AS-hxR" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="159" width="393" height="510"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEU-Ep-dAk">
+                                <rect key="frame" x="10" y="98" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-cs-J1O">
+                                <rect key="frame" x="55" y="91.666666666666671" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="qDP-Lv-AXi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8B-7h-VWO">
+                                <rect key="frame" x="205" y="98" width="20" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="dCF-25-Qxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zAl-yj-bFZ">
+                                <rect key="frame" x="235" y="91.666666666666671" width="140" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="qP6-kg-0jb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X5V-qT-mO7"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EGX-AS-hxR" firstAttribute="top" secondItem="X5V-qT-mO7" secondAttribute="top" constant="100" id="2se-e9-GK5"/>
+                            <constraint firstItem="X5V-qT-mO7" firstAttribute="trailing" secondItem="EGX-AS-hxR" secondAttribute="trailing" id="2tP-yU-5db"/>
+                            <constraint firstItem="qEU-Ep-dAk" firstAttribute="leading" secondItem="X5V-qT-mO7" secondAttribute="leading" constant="10" id="5H1-WC-m0X"/>
+                            <constraint firstItem="EGX-AS-hxR" firstAttribute="top" secondItem="qEU-Ep-dAk" secondAttribute="bottom" constant="40" id="F7f-eu-sgc"/>
+                            <constraint firstItem="c8B-7h-VWO" firstAttribute="leading" secondItem="yT7-cs-J1O" secondAttribute="trailing" constant="10" id="OyK-YK-Vgh"/>
+                            <constraint firstItem="zAl-yj-bFZ" firstAttribute="centerY" secondItem="qEU-Ep-dAk" secondAttribute="centerY" id="Pgl-rI-6ng"/>
+                            <constraint firstItem="yT7-cs-J1O" firstAttribute="leading" secondItem="qEU-Ep-dAk" secondAttribute="trailing" constant="10" id="WxM-OM-b2B"/>
+                            <constraint firstItem="yT7-cs-J1O" firstAttribute="centerY" secondItem="qEU-Ep-dAk" secondAttribute="centerY" id="aUc-OA-EkD"/>
+                            <constraint firstItem="EGX-AS-hxR" firstAttribute="leading" secondItem="X5V-qT-mO7" secondAttribute="leading" id="aw5-2X-KJr"/>
+                            <constraint firstItem="zAl-yj-bFZ" firstAttribute="leading" secondItem="c8B-7h-VWO" secondAttribute="trailing" constant="10" id="nIQ-uT-Phd"/>
+                            <constraint firstItem="c8B-7h-VWO" firstAttribute="centerY" secondItem="qEU-Ep-dAk" secondAttribute="centerY" id="ob1-w6-59j"/>
+                            <constraint firstItem="X5V-qT-mO7" firstAttribute="bottom" secondItem="EGX-AS-hxR" secondAttribute="bottom" constant="100" id="tPr-Vi-YRq"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="graphlcon" id="E8g-xy-Jjg"/>
+                    <connections>
+                        <outlet property="endDateTextField" destination="zAl-yj-bFZ" id="X0a-wQ-QPc"/>
+                        <outlet property="graphView" destination="EGX-AS-hxR" id="2T9-Be-BsK"/>
+                        <outlet property="startDateTextField" destination="yT7-cs-J1O" id="deI-tc-Sgd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iok-eT-EfT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.58015267175568" y="329.57746478873241"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="xLL-uS-Tlm">
+            <objects>
+                <viewController title="Calendar" id="8CV-Et-LWb" customClass="CalendarViewController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ECc-qv-uJd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Uj-gj-kAZ" customClass="FSCalendar">
+                                <rect key="frame" x="20" y="209" width="353" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAS-tJ-V0H">
+                                <rect key="frame" x="323" y="699" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BBQ-3n-UJl"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wke-17-STi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="8CV-Et-LWb" eventType="touchUpInside" id="PH2-Sd-ACx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hIw-Bh-Sp1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hIw-Bh-Sp1" firstAttribute="trailing" secondItem="4Uj-gj-kAZ" secondAttribute="trailing" constant="20" id="1D7-sZ-yi2"/>
+                            <constraint firstItem="4Uj-gj-kAZ" firstAttribute="top" secondItem="hIw-Bh-Sp1" secondAttribute="top" constant="150" id="3co-GY-ocA"/>
+                            <constraint firstItem="4Uj-gj-kAZ" firstAttribute="leading" secondItem="hIw-Bh-Sp1" secondAttribute="leading" constant="20" id="6LO-Uu-SPO"/>
+                            <constraint firstItem="hIw-Bh-Sp1" firstAttribute="bottom" secondItem="4Uj-gj-kAZ" secondAttribute="bottom" constant="100" id="7vh-al-23I"/>
+                            <constraint firstItem="hIw-Bh-Sp1" firstAttribute="bottom" secondItem="FAS-tJ-V0H" secondAttribute="bottom" constant="20" id="HtO-vZ-JNZ"/>
+                            <constraint firstItem="hIw-Bh-Sp1" firstAttribute="trailing" secondItem="FAS-tJ-V0H" secondAttribute="trailing" constant="20" id="agv-LB-Dum"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="calendarlcon" id="sBD-1Z-EOf"/>
+                    <connections>
+                        <outlet property="addButton" destination="FAS-tJ-V0H" id="Ccn-D5-YNv"/>
+                        <outlet property="calendarView" destination="4Uj-gj-kAZ" id="9hd-0h-hBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EO8-mT-hdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="506" y="-330"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="Eus-Ko-IKp">
+            <objects>
+                <tabBarController id="ir8-HQ-aUA" customClass="MainTabBarController" customModule="MyDietDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qnU-kM-S3o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="8CV-Et-LWb" kind="relationship" relationship="viewControllers" id="aaB-Un-vV3"/>
+                        <segue destination="6gK-Ok-gUs" kind="relationship" relationship="viewControllers" id="AHe-BR-bu3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jxZ-mp-oxR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="-25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="calendarlcon" width="25" height="25"/>
+        <image name="graphlcon" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
